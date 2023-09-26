@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_items",
+  "info": {
+    "displayName": "History item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

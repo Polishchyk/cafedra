@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_home_sliders",
+  "info": {
+    "displayName": "Home slider",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Slide": {
+      "displayName": "Slide",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.slide"
+    }
+  }
+}

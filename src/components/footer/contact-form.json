@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_footer_contact_forms",
+  "info": {
+    "displayName": "Contact form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "send": {
+      "type": "string"
+    }
+  }
+}

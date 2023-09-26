@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sciences",
+  "info": {
+    "singularName": "science",
+    "pluralName": "sciences",
+    "displayName": "Science"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "short_description": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

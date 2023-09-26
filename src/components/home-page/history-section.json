@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_history_sections",
+  "info": {
+    "displayName": "history-section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "history_item": {
+      "displayName": "item",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.item"
+    },
+    "history_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    }
+  }
+}
