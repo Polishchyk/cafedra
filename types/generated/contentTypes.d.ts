@@ -778,6 +778,7 @@ export interface ApiApplicantApplicant extends Schema.SingleType {
     singularName: 'applicant';
     pluralName: 'applicants';
     displayName: 'Applicant';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -789,7 +790,7 @@ export interface ApiApplicantApplicant extends Schema.SingleType {
     Conditions_of_entry: Attribute.RichText & Attribute.Required;
     Specialty: Attribute.String & Attribute.Required;
     specialty_description: Attribute.RichText & Attribute.Required;
-    Degre: Attribute.Component<'sp.degre'> & Attribute.Required;
+    Degre: Attribute.Component<'sp.degre', true> & Attribute.Required;
     Description: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -848,6 +849,37 @@ export interface ApiChairChair extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::chair.chair',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactContact extends Schema.SingleType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'Contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
       'oneToOne',
       'admin::user'
     > &
@@ -1218,6 +1250,7 @@ declare module '@strapi/strapi' {
       'plugin::menus.menu-item': PluginMenusMenuItem;
       'api::applicant.applicant': ApiApplicantApplicant;
       'api::chair.chair': ApiChairChair;
+      'api::contact.contact': ApiContactContact;
       'api::event.event': ApiEventEvent;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;

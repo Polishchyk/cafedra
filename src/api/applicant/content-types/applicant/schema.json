@@ -4,7 +4,8 @@
   "info": {
     "singularName": "applicant",
     "pluralName": "applicants",
-    "displayName": "Applicant"
+    "displayName": "Applicant",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -37,7 +38,7 @@
     },
     "Degre": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "sp.degre",
       "required": true
     },
