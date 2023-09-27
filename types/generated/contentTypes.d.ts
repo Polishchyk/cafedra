@@ -788,6 +788,18 @@ export interface ApiChairChair extends Schema.CollectionType {
     Image: Attribute.Media & Attribute.Required;
     Description: Attribute.RichText & Attribute.Required;
     short_description: Attribute.RichText;
+    Logo: Attribute.Media & Attribute.Required;
+    head_of_department_label: Attribute.String & Attribute.Required;
+    head_of_department_value: Attribute.String & Attribute.Required;
+    contacts_label: Attribute.String & Attribute.Required;
+    contacts_value: Attribute.String & Attribute.Required;
+    email_label: Attribute.String & Attribute.Required;
+    email_value: Attribute.String & Attribute.Required;
+    avatar: Attribute.Media & Attribute.Required;
+    conducts_training_in_specialties_label: Attribute.String &
+      Attribute.Required;
+    educational_degrees: Attribute.Component<'chair.educational-degree', true> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -895,6 +907,38 @@ export interface ApiHeaderHeader extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHistoryOfTheInstituteHistoryOfTheInstitute
+  extends Schema.SingleType {
+  collectionName: 'history_of_the_institutes';
+  info: {
+    singularName: 'history-of-the-institute';
+    pluralName: 'history-of-the-institutes';
+    displayName: 'History of the institute';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::history-of-the-institute.history-of-the-institute',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::history-of-the-institute.history-of-the-institute',
       'oneToOne',
       'admin::user'
     > &
@@ -1092,6 +1136,38 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
   };
 }
 
+export interface ApiSpecialtyPSpecialtyP extends Schema.SingleType {
+  collectionName: 'specialty_ps';
+  info: {
+    singularName: 'specialty-p';
+    pluralName: 'specialty-ps';
+    displayName: 'Specialty Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::specialty-p.specialty-p',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::specialty-p.specialty-p',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -1114,10 +1190,12 @@ declare module '@strapi/strapi' {
       'api::event.event': ApiEventEvent;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
+      'api::history-of-the-institute.history-of-the-institute': ApiHistoryOfTheInstituteHistoryOfTheInstitute;
       'api::home.home': ApiHomeHome;
       'api::new.new': ApiNewNew;
       'api::science.science': ApiScienceScience;
       'api::specialty.specialty': ApiSpecialtySpecialty;
+      'api::specialty-p.specialty-p': ApiSpecialtyPSpecialtyP;
     }
   }
 }

@@ -30,6 +30,57 @@
     },
     "short_description": {
       "type": "richtext"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "head_of_department_label": {
+      "type": "string",
+      "required": true
+    },
+    "head_of_department_value": {
+      "type": "string",
+      "required": true
+    },
+    "contacts_label": {
+      "type": "string",
+      "required": true
+    },
+    "contacts_value": {
+      "type": "string",
+      "required": true
+    },
+    "email_label": {
+      "type": "string",
+      "required": true
+    },
+    "email_value": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "conducts_training_in_specialties_label": {
+      "type": "string",
+      "required": true
+    },
+    "educational_degrees": {
+      "displayName": "Educational degree",
+      "type": "component",
+      "repeatable": true,
+      "component": "chair.educational-degree",
+      "required": true
     }
   }
 }

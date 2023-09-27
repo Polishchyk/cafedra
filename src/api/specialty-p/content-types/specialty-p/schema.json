@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "specialty_ps",
+  "info": {
+    "singularName": "specialty-p",
+    "pluralName": "specialty-ps",
+    "displayName": "Specialty Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
