@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_footer_social_medias",
+    "info": {
+        "displayName": "Social media",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "URL": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

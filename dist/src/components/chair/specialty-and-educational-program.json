@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_chair_specialty_and_educational_programs",
+    "info": {
+        "displayName": "Specialty and Educational program"
+    },
+    "options": {},
+    "attributes": {
+        "Specialty": {
+            "type": "string",
+            "required": true
+        },
+        "educational_program": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

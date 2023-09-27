@@ -1,0 +1,23 @@
+{
+    "kind": "singleType",
+    "collectionName": "history_of_the_institutes",
+    "info": {
+        "singularName": "history-of-the-institute",
+        "pluralName": "history-of-the-institutes",
+        "displayName": "History of the institute"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true
+        },
+        "Description": {
+            "type": "richtext",
+            "required": true
+        }
+    }
+}

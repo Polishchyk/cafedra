@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_footer_contacts",
+    "info": {
+        "displayName": "Contacts",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true
+        },
+        "Address": {
+            "type": "richtext",
+            "required": true
+        },
+        "Phones": {
+            "type": "richtext",
+            "required": true
+        },
+        "Secretary": {
+            "type": "richtext",
+            "required": true
+        }
+    }
+}

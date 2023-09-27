@@ -1,0 +1,117 @@
+{
+    "kind": "singleType",
+    "collectionName": "homes",
+    "info": {
+        "singularName": "home",
+        "pluralName": "homes",
+        "displayName": "Home",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "type": "string"
+        },
+        "Slider": {
+            "type": "component",
+            "repeatable": false,
+            "component": "home-page.home-slider"
+        },
+        "main_section_title": {
+            "type": "string",
+            "required": true
+        },
+        "main_section_description": {
+            "type": "richtext"
+        },
+        "main_section_link": {
+            "type": "component",
+            "repeatable": false,
+            "component": "button.button"
+        },
+        "specialty_section_title": {
+            "type": "string"
+        },
+        "specialties": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::specialty.specialty"
+        },
+        "chairs_section_title": {
+            "type": "string",
+            "required": true
+        },
+        "chairs": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::chair.chair"
+        },
+        "Chairs_link": {
+            "type": "component",
+            "repeatable": false,
+            "component": "button.button"
+        },
+        "chairs_description": {
+            "type": "richtext"
+        },
+        "history_section_title": {
+            "type": "string"
+        },
+        "history_section": {
+            "type": "component",
+            "repeatable": false,
+            "component": "home-page.history-section"
+        },
+        "regulations_on_the_institute": {
+            "type": "string"
+        },
+        "regulations_on_the_institute_file": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "files"
+            ]
+        },
+        "presentation_of_departments": {
+            "type": "string"
+        },
+        "presentation_of_departments_file": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "files"
+            ]
+        },
+        "event_section_title": {
+            "type": "string"
+        },
+        "events": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::event.event"
+        },
+        "news_section_title": {
+            "type": "string",
+            "required": true
+        },
+        "news": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::new.new"
+        },
+        "Science_section_title": {
+            "type": "string",
+            "required": true
+        },
+        "sciences": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::science.science"
+        }
+    }
+}

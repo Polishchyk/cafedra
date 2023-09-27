@@ -1,0 +1,40 @@
+{
+    "kind": "collectionType",
+    "collectionName": "specialties",
+    "info": {
+        "singularName": "specialty",
+        "pluralName": "specialties",
+        "displayName": "Specialty",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "pluginOptions": {},
+            "type": "string",
+            "required": true
+        },
+        "Image": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ],
+            "pluginOptions": {}
+        },
+        "Description": {
+            "pluginOptions": {},
+            "type": "richtext",
+            "required": true
+        },
+        "short_description": {
+            "pluginOptions": {},
+            "type": "richtext",
+            "required": true
+        }
+    }
+}

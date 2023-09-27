@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcafedra=self.webpackChunkcafedra||[]).push([[9778],{79778:e=>{e.exports=JSON.parse('{"form.button.draft":"Open draft preview","form.button.published":"Open live view","form.button.copy-link":"Copy link","form.button.copy-link.draft":"Copy preview link","notification.success.link-copied":"Link copied to the clipboard"}')}}]);

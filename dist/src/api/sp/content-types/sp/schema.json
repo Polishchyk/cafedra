@@ -1,0 +1,31 @@
+{
+    "kind": "singleType",
+    "collectionName": "sps",
+    "info": {
+        "singularName": "sp",
+        "pluralName": "sps",
+        "displayName": "Specialty Page",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true
+        },
+        "Description": {
+            "type": "richtext",
+            "required": true
+        },
+        "degre": {
+            "displayName": "degre",
+            "type": "component",
+            "repeatable": true,
+            "component": "sp.degre",
+            "required": true
+        }
+    }
+}

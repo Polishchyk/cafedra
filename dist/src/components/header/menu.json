@@ -1,0 +1,34 @@
+{
+    "collectionName": "components_header_menus",
+    "info": {
+        "displayName": "menu",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "items": {
+            "displayName": "menu_items",
+            "type": "component",
+            "repeatable": true,
+            "component": "header.menu-items",
+            "required": true
+        },
+        "logo": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "item": {
+            "type": "component",
+            "repeatable": true,
+            "component": "header.menu-items"
+        }
+    }
+}
