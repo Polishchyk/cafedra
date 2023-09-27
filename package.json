@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^2.0.4",
+    "@strapi/plugin-documentation": "^4.13.7",
     "@strapi/plugin-i18n": "4.13.7",
     "@strapi/plugin-seo": "^1.9.5",
     "@strapi/plugin-users-permissions": "4.13.7",
@@ -20,6 +21,7 @@
     "mysql": "2.18.1",
     "react-dom": "^18.2.0",
     "strapi-plugin-menus": "^1.4.3",
+    "strapi-plugin-populate-deep": "^3.0.0",
     "strapi-plugin-preview-button": "^2.0.0",
     "strapi-provider-email-smtp": "^1.0.3"
   },

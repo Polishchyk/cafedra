@@ -15,10 +15,12 @@
       "required": true
     },
     "Phones": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "Secretary": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

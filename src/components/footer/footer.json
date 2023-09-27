@@ -10,13 +10,15 @@
       "displayName": "Contacts",
       "type": "component",
       "repeatable": false,
-      "component": "footer.contacts"
+      "component": "footer.contacts",
+      "required": true
     },
     "contact_form": {
       "displayName": "Contact form",
       "type": "component",
       "repeatable": false,
-      "component": "footer.contact-form"
+      "component": "footer.contact-form",
+      "required": true
     },
     "social_media": {
       "displayName": "Social media",
@@ -26,10 +28,12 @@
       "required": true
     },
     "Meta": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Copyright": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

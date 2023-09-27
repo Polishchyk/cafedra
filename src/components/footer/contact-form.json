@@ -7,19 +7,24 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "question": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "send": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

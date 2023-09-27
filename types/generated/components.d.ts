@@ -46,11 +46,11 @@ export interface FooterContactForm extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    name: Attribute.String;
-    email: Attribute.String;
-    question: Attribute.String;
-    send: Attribute.String;
+    title: Attribute.String & Attribute.Required;
+    name: Attribute.String & Attribute.Required;
+    email: Attribute.String & Attribute.Required;
+    question: Attribute.String & Attribute.Required;
+    send: Attribute.String & Attribute.Required;
   };
 }
 
@@ -63,8 +63,8 @@ export interface FooterContacts extends Schema.Component {
   attributes: {
     Title: Attribute.String & Attribute.Required;
     Address: Attribute.RichText & Attribute.Required;
-    Phones: Attribute.RichText;
-    Secretary: Attribute.RichText;
+    Phones: Attribute.RichText & Attribute.Required;
+    Secretary: Attribute.RichText & Attribute.Required;
   };
 }
 
@@ -75,12 +75,13 @@ export interface FooterFooter extends Schema.Component {
     description: '';
   };
   attributes: {
-    contacts: Attribute.Component<'footer.contacts'>;
-    contact_form: Attribute.Component<'footer.contact-form'>;
+    contacts: Attribute.Component<'footer.contacts'> & Attribute.Required;
+    contact_form: Attribute.Component<'footer.contact-form'> &
+      Attribute.Required;
     social_media: Attribute.Component<'footer.social-media', true> &
       Attribute.Required;
-    Meta: Attribute.String;
-    Copyright: Attribute.RichText;
+    Meta: Attribute.String & Attribute.Required;
+    Copyright: Attribute.RichText & Attribute.Required;
   };
 }
 
