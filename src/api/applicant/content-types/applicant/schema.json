@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "applicants",
+  "info": {
+    "singularName": "applicant",
+    "pluralName": "applicants",
+    "displayName": "Applicant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "admissions_committee_institute": {
+      "type": "string",
+      "required": true
+    },
+    "Contact": {
+      "type": "richtext",
+      "required": true
+    },
+    "Conditions_of_entry": {
+      "type": "richtext",
+      "required": true
+    },
+    "Specialty": {
+      "type": "string",
+      "required": true
+    },
+    "specialty_description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Degre": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sp.degre",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

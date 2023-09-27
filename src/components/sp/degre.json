@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sp_degres",
+  "info": {
+    "displayName": "degre",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "sp_pr": {
+      "displayName": "Speciality-Program",
+      "type": "component",
+      "repeatable": true,
+      "component": "sp.speciality-program",
+      "required": true
+    }
+  }
+}

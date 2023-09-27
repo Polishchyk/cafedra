@@ -772,6 +772,43 @@ export interface PluginMenusMenuItem extends Schema.CollectionType {
   };
 }
 
+export interface ApiApplicantApplicant extends Schema.SingleType {
+  collectionName: 'applicants';
+  info: {
+    singularName: 'applicant';
+    pluralName: 'applicants';
+    displayName: 'Applicant';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    admissions_committee_institute: Attribute.String & Attribute.Required;
+    Contact: Attribute.RichText & Attribute.Required;
+    Conditions_of_entry: Attribute.RichText & Attribute.Required;
+    Specialty: Attribute.String & Attribute.Required;
+    specialty_description: Attribute.RichText & Attribute.Required;
+    Degre: Attribute.Component<'sp.degre'> & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::applicant.applicant',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::applicant.applicant',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiChairChair extends Schema.CollectionType {
   collectionName: 'chairs';
   info: {
@@ -1067,6 +1104,31 @@ export interface ApiScienceScience extends Schema.CollectionType {
   };
 }
 
+export interface ApiSpSp extends Schema.SingleType {
+  collectionName: 'sps';
+  info: {
+    singularName: 'sp';
+    pluralName: 'sps';
+    displayName: 'Specialty Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
+    degre: Attribute.Component<'sp.degre', true> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::sp.sp', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::sp.sp', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSpecialtySpecialty extends Schema.CollectionType {
   collectionName: 'specialties';
   info: {
@@ -1136,38 +1198,6 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
   };
 }
 
-export interface ApiSpecialtyPSpecialtyP extends Schema.SingleType {
-  collectionName: 'specialty_ps';
-  info: {
-    singularName: 'specialty-p';
-    pluralName: 'specialty-ps';
-    displayName: 'Specialty Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String & Attribute.Required;
-    Description: Attribute.RichText & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::specialty-p.specialty-p',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::specialty-p.specialty-p',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -1186,6 +1216,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::menus.menu': PluginMenusMenu;
       'plugin::menus.menu-item': PluginMenusMenuItem;
+      'api::applicant.applicant': ApiApplicantApplicant;
       'api::chair.chair': ApiChairChair;
       'api::event.event': ApiEventEvent;
       'api::footer.footer': ApiFooterFooter;
@@ -1194,8 +1225,8 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::new.new': ApiNewNew;
       'api::science.science': ApiScienceScience;
+      'api::sp.sp': ApiSpSp;
       'api::specialty.specialty': ApiSpecialtySpecialty;
-      'api::specialty-p.specialty-p': ApiSpecialtyPSpecialtyP;
     }
   }
 }

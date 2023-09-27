@@ -1,9 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "specialty_ps",
+  "collectionName": "sps",
   "info": {
-    "singularName": "specialty-p",
-    "pluralName": "specialty-ps",
+    "singularName": "sp",
+    "pluralName": "sps",
     "displayName": "Specialty Page",
     "description": ""
   },
@@ -18,6 +18,13 @@
     },
     "Description": {
       "type": "richtext",
+      "required": true
+    },
+    "degre": {
+      "displayName": "degre",
+      "type": "component",
+      "repeatable": true,
+      "component": "sp.degre",
       "required": true
     }
   }

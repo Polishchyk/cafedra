@@ -224,6 +224,35 @@ export interface SharedSeo extends Schema.Component {
   };
 }
 
+export interface SpDegre extends Schema.Component {
+  collectionName: 'components_sp_degres';
+  info: {
+    displayName: 'degre';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    sp_pr: Attribute.Component<'sp.speciality-program', true> &
+      Attribute.Required;
+  };
+}
+
+export interface SpSpecialityProgram extends Schema.Component {
+  collectionName: 'components_sp_speciality_programs';
+  info: {
+    displayName: 'Speciality-Program';
+    description: '';
+  };
+  attributes: {
+    specialty: Attribute.Relation<
+      'sp.speciality-program',
+      'oneToOne',
+      'api::specialty.specialty'
+    >;
+    program: Attribute.String & Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface Components {
@@ -242,6 +271,8 @@ declare module '@strapi/strapi' {
       'home-page.slide': HomePageSlide;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
+      'sp.degre': SpDegre;
+      'sp.speciality-program': SpSpecialityProgram;
     }
   }
 }
