@@ -1230,6 +1230,37 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
   };
 }
 
+export interface ApiStudentStudent extends Schema.SingleType {
+  collectionName: 'students';
+  info: {
+    singularName: 'student';
+    pluralName: 'students';
+    displayName: 'Student';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -1260,6 +1291,7 @@ declare module '@strapi/strapi' {
       'api::science.science': ApiScienceScience;
       'api::sp.sp': ApiSpSp;
       'api::specialty.specialty': ApiSpecialtySpecialty;
+      'api::student.student': ApiStudentStudent;
     }
   }
 }
