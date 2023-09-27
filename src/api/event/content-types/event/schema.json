@@ -13,12 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
@@ -31,7 +32,8 @@
       "type": "datetime"
     },
     "short_description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

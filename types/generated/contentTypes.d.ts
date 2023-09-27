@@ -784,9 +784,9 @@ export interface ApiChairChair extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    image: Attribute.Media & Attribute.Required;
-    description: Attribute.RichText & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
+    Image: Attribute.Media & Attribute.Required;
+    Description: Attribute.RichText & Attribute.Required;
     short_description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -818,11 +818,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    Image: Attribute.Media;
+    Title: Attribute.String & Attribute.Required;
+    Image: Attribute.Media & Attribute.Required;
     description: Attribute.RichText & Attribute.Required;
     Date: Attribute.DateTime;
-    short_description: Attribute.RichText;
+    short_description: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -995,15 +995,16 @@ export interface ApiScienceScience extends Schema.CollectionType {
     singularName: 'science';
     pluralName: 'sciences';
     displayName: 'Science';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Title: Attribute.String & Attribute.Required;
-    Image: Attribute.Media;
+    Image: Attribute.Media & Attribute.Required;
     description: Attribute.RichText & Attribute.Required;
-    short_description: Attribute.RichText;
+    short_description: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1040,6 +1041,7 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1060,6 +1062,7 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
         };
       }>;
     short_description: Attribute.RichText &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

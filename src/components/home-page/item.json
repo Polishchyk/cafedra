@@ -6,9 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "description": {
-      "type": "string"
-    },
     "Image": {
       "type": "media",
       "multiple": false,
@@ -16,6 +13,10 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

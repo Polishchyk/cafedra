@@ -4,7 +4,8 @@
   "info": {
     "singularName": "science",
     "pluralName": "sciences",
-    "displayName": "Science"
+    "displayName": "Science",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,11 +17,12 @@
       "required": true
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
       "type": "richtext",
@@ -28,7 +30,7 @@
     },
     "short_description": {
       "type": "richtext",
-      "required": false
+      "required": true
     }
   }
 }

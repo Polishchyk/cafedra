@@ -13,17 +13,18 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
-    },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
+      "type": "string",
       "required": true
     },
-    "description": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Description": {
       "type": "richtext",
       "required": true
     },
