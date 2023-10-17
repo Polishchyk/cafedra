@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-10-17T09:59:43.639Z"
+    "x-generation-date": "2023-10-17T10:18:11.133Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1031,7 +1031,7 @@
               "email_value",
               "avatar",
               "conducts_training_in_specialties_label",
-              "educational_degrees"
+              "degre"
             ],
             "type": "object",
             "properties": {
@@ -1104,10 +1104,10 @@
               "conducts_training_in_specialties_label": {
                 "type": "string"
               },
-              "educational_degrees": {
+              "degre": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/ChairEducationalDegreeComponent"
+                  "$ref": "#/components/schemas/SpDegreComponent"
                 }
               }
             }
@@ -1175,7 +1175,7 @@
           "email_value",
           "avatar",
           "conducts_training_in_specialties_label",
-          "educational_degrees"
+          "degre"
         ],
         "properties": {
           "Title": {
@@ -2113,10 +2113,10 @@
           "conducts_training_in_specialties_label": {
             "type": "string"
           },
-          "educational_degrees": {
+          "degre": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ChairEducationalDegreeComponent"
+              "$ref": "#/components/schemas/SpDegreComponent"
             }
           },
           "createdAt": {
@@ -2186,34 +2186,6 @@
           },
           "meta": {
             "type": "object"
-          }
-        }
-      },
-      "ChairEducationalDegreeComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "Title": {
-            "type": "string"
-          },
-          "specialty_educational_program": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "number"
-                },
-                "Specialty": {
-                  "type": "string"
-                },
-                "educational_program": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -6386,7 +6358,7 @@
                         "conducts_training_in_specialties_label": {
                           "type": "string"
                         },
-                        "educational_degrees": {
+                        "degre": {
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -6397,7 +6369,7 @@
                               "Title": {
                                 "type": "string"
                               },
-                              "specialty_educational_program": {
+                              "sp_pr": {
                                 "type": "array",
                                 "items": {
                                   "type": "object",
@@ -6405,10 +6377,24 @@
                                     "id": {
                                       "type": "number"
                                     },
-                                    "Specialty": {
-                                      "type": "string"
+                                    "specialty": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
                                     },
-                                    "educational_program": {
+                                    "program": {
                                       "type": "string"
                                     }
                                   }

@@ -12,7 +12,7 @@
             "target": "api::specialty.specialty"
         },
         "program": {
-            "type": "string",
+            "type": "text",
             "required": true
         }
     }

@@ -836,8 +836,7 @@ export interface ApiChairChair extends Schema.CollectionType {
     avatar: Attribute.Media & Attribute.Required;
     conducts_training_in_specialties_label: Attribute.String &
       Attribute.Required;
-    educational_degrees: Attribute.Component<'chair.educational-degree', true> &
-      Attribute.Required;
+    degre: Attribute.Component<'sp.degre', true> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -75,11 +75,10 @@
       "type": "string",
       "required": true
     },
-    "educational_degrees": {
-      "displayName": "Educational degree",
+    "degre": {
       "type": "component",
       "repeatable": true,
-      "component": "chair.educational-degree",
+      "component": "sp.degre",
       "required": true
     }
   }

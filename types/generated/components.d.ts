@@ -12,33 +12,6 @@ export interface ButtonButton extends Schema.Component {
   };
 }
 
-export interface ChairEducationalDegree extends Schema.Component {
-  collectionName: 'components_chair_educational_degrees';
-  info: {
-    displayName: 'Educational degree';
-    description: '';
-  };
-  attributes: {
-    Title: Attribute.String & Attribute.Required;
-    specialty_educational_program: Attribute.Component<
-      'chair.specialty-and-educational-program',
-      true
-    > &
-      Attribute.Required;
-  };
-}
-
-export interface ChairSpecialtyAndEducationalProgram extends Schema.Component {
-  collectionName: 'components_chair_specialty_and_educational_programs';
-  info: {
-    displayName: 'Specialty and Educational program';
-  };
-  attributes: {
-    Specialty: Attribute.String & Attribute.Required;
-    educational_program: Attribute.String & Attribute.Required;
-  };
-}
-
 export interface FooterContactForm extends Schema.Component {
   collectionName: 'components_footer_contact_forms';
   info: {
@@ -250,7 +223,7 @@ export interface SpSpecialityProgram extends Schema.Component {
       'oneToOne',
       'api::specialty.specialty'
     >;
-    program: Attribute.String & Attribute.Required;
+    program: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -258,8 +231,6 @@ declare module '@strapi/strapi' {
   export module Shared {
     export interface Components {
       'button.button': ButtonButton;
-      'chair.educational-degree': ChairEducationalDegree;
-      'chair.specialty-and-educational-program': ChairSpecialtyAndEducationalProgram;
       'footer.contact-form': FooterContactForm;
       'footer.contacts': FooterContacts;
       'footer.footer': FooterFooter;
