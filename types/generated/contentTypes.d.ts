@@ -983,6 +983,12 @@ export interface ApiChairChair extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    site_url: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

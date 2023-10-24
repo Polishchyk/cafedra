@@ -154,6 +154,14 @@
           "localized": true
         }
       }
+    },
+    "site_url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
