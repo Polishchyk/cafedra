@@ -10,11 +10,20 @@
     "options": {
         "draftAndPublish": true
     },
-    "pluginOptions": {},
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
     "attributes": {
         "Title": {
             "type": "string",
-            "required": true
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
         "Image": {
             "type": "media",
@@ -22,14 +31,29 @@
             "required": true,
             "allowedTypes": [
                 "images"
-            ]
+            ],
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
         "description": {
             "type": "richtext",
-            "required": true
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
         "short_description": {
-            "type": "richtext"
+            "type": "richtext",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }

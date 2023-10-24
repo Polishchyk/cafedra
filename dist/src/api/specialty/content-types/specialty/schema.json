@@ -10,10 +10,18 @@
     "options": {
         "draftAndPublish": true
     },
-    "pluginOptions": {},
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
     "attributes": {
         "Title": {
-            "pluginOptions": {},
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
             "type": "string",
             "required": true
         },
@@ -24,15 +32,27 @@
             "allowedTypes": [
                 "images"
             ],
-            "pluginOptions": {}
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
         "Description": {
-            "pluginOptions": {},
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
             "type": "richtext",
             "required": true
         },
         "short_description": {
-            "pluginOptions": {},
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
             "type": "richtext",
             "required": true
         }

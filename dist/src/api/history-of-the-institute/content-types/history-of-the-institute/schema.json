@@ -4,20 +4,35 @@
     "info": {
         "singularName": "history-of-the-institute",
         "pluralName": "history-of-the-institutes",
-        "displayName": "History of the institute"
+        "displayName": "History of the institute",
+        "description": ""
     },
     "options": {
         "draftAndPublish": true
     },
-    "pluginOptions": {},
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
     "attributes": {
         "Title": {
             "type": "string",
-            "required": true
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
         "Description": {
             "type": "richtext",
-            "required": true
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }
