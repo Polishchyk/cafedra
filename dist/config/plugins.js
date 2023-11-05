@@ -15,5 +15,16 @@ exports.default = ({ env }) => ({
             },
         },
     },
+    slugify: {
+        enabled: true,
+        config: {
+            contentTypes: {
+                chair: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+            },
+        },
+    },
     // ...
 });
