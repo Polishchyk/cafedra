@@ -206,6 +206,15 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::science.science"
+    },
+    "site_url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": true
     }
   }
 }

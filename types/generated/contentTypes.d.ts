@@ -884,6 +884,13 @@ export interface ApiApplicantApplicant extends Schema.SingleType {
           localized: true;
         };
       }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1023,6 +1030,7 @@ export interface ApiChairChair extends Schema.CollectionType {
         };
       }>;
     site_url: Attribute.String &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1078,6 +1086,13 @@ export interface ApiContactContact extends Schema.SingleType {
       }>;
     Description: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1153,6 +1168,13 @@ export interface ApiEventEvent extends Schema.CollectionType {
       }>;
     short_description: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1304,6 +1326,13 @@ export interface ApiHistoryOfTheInstituteHistoryOfTheInstitute
       }>;
     Description: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1485,6 +1514,13 @@ export interface ApiHomeHome extends Schema.SingleType {
       'oneToMany',
       'api::science.science'
     >;
+    site_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1607,6 +1643,13 @@ export interface ApiNewNew extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1663,6 +1706,13 @@ export interface ApiScienceScience extends Schema.CollectionType {
       }>;
     short_description: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1730,6 +1780,13 @@ export interface ApiSpSp extends Schema.SingleType {
           localized: true;
         };
       }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1787,6 +1844,13 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1837,6 +1901,13 @@ export interface ApiStudentStudent extends Schema.SingleType {
       }>;
     Description: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    site_url: Attribute.String &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

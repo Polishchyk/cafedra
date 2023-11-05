@@ -23,6 +23,46 @@ exports.default = ({ env }) => ({
                     field: 'site_url',
                     references: 'Title',
                 },
+                event: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                new: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                science: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                specialty: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                applicant: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                contact: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                "history-of-the-institute": {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                home: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                sp: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
+                student: {
+                    field: 'site_url',
+                    references: 'Title',
+                },
             },
         },
     },

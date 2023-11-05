@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-11-05T14:26:57.785Z"
+    "x-generation-date": "2023-11-05T14:53:43.627Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -127,6 +127,9 @@
           "Description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -176,6 +179,9 @@
                 }
               },
               "Description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -337,6 +343,9 @@
             }
           },
           "Description": {
+            "type": "string"
+          },
+          "site_url": {
             "type": "string"
           },
           "createdAt": {
@@ -1080,6 +1089,9 @@
                               "type": "string"
                             },
                             "short_description": {
+                              "type": "string"
+                            },
+                            "site_url": {
                               "type": "string"
                             },
                             "createdAt": {
@@ -2539,6 +2551,9 @@
           "Description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -2561,6 +2576,9 @@
                 "type": "string"
               },
               "Description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -2695,6 +2713,9 @@
             "type": "string"
           },
           "Description": {
+            "type": "string"
+          },
+          "site_url": {
             "type": "string"
           },
           "createdAt": {
@@ -3066,6 +3087,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -3108,6 +3132,9 @@
                 "format": "date-time"
               },
               "short_description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -3872,6 +3899,9 @@
             "format": "date-time"
           },
           "short_description": {
+            "type": "string"
+          },
+          "site_url": {
             "type": "string"
           },
           "createdAt": {
@@ -5811,6 +5841,9 @@
           "Description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -5833,6 +5866,9 @@
                 "type": "string"
               },
               "Description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -5967,6 +6003,9 @@
             "type": "string"
           },
           "Description": {
+            "type": "string"
+          },
+          "site_url": {
             "type": "string"
           },
           "createdAt": {
@@ -6456,6 +6495,9 @@
               "example": "string or id"
             }
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -6617,6 +6659,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "site_url": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -6928,6 +6973,9 @@
                           "type": "string"
                         },
                         "short_description": {
+                          "type": "string"
+                        },
+                        "site_url": {
                           "type": "string"
                         },
                         "createdAt": {
@@ -8043,6 +8091,9 @@
                         "short_description": {
                           "type": "string"
                         },
+                        "site_url": {
+                          "type": "string"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -8271,6 +8322,9 @@
                           "type": "string"
                         },
                         "short_description": {
+                          "type": "string"
+                        },
+                        "site_url": {
                           "type": "string"
                         },
                         "createdAt": {
@@ -8503,6 +8557,9 @@
                         "short_description": {
                           "type": "string"
                         },
+                        "site_url": {
+                          "type": "string"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -8567,6 +8624,9 @@
                 }
               }
             }
+          },
+          "site_url": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -10050,6 +10110,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -10087,6 +10150,9 @@
                 "type": "string"
               },
               "short_description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -10848,6 +10914,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -10962,6 +11031,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -11000,6 +11072,9 @@
                 "type": "string"
               },
               "short_description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -11762,6 +11837,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -11867,6 +11945,9 @@
               "$ref": "#/components/schemas/SpDegreComponent"
             }
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -11897,6 +11978,9 @@
                 "items": {
                   "$ref": "#/components/schemas/SpDegreComponent"
                 }
+              },
+              "site_url": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -12039,6 +12123,9 @@
               "$ref": "#/components/schemas/SpDegreComponent"
             }
           },
+          "site_url": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -12153,6 +12240,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -12191,6 +12281,9 @@
                 "type": "string"
               },
               "short_description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -12953,6 +13046,9 @@
           "short_description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -13051,6 +13147,9 @@
           "Description": {
             "type": "string"
           },
+          "site_url": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -13073,6 +13172,9 @@
                 "type": "string"
               },
               "Description": {
+                "type": "string"
+              },
+              "site_url": {
                 "type": "string"
               },
               "locale": {
@@ -13207,6 +13309,9 @@
             "type": "string"
           },
           "Description": {
+            "type": "string"
+          },
+          "site_url": {
             "type": "string"
           },
           "createdAt": {
