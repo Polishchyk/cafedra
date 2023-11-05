@@ -884,7 +884,7 @@ export interface ApiApplicantApplicant extends Schema.SingleType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1030,6 +1030,12 @@ export interface ApiChairChair extends Schema.CollectionType {
         };
       }>;
     site_url: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1091,7 +1097,7 @@ export interface ApiContactContact extends Schema.SingleType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1173,7 +1179,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1331,7 +1337,7 @@ export interface ApiHistoryOfTheInstituteHistoryOfTheInstitute
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1514,7 +1520,7 @@ export interface ApiHomeHome extends Schema.SingleType {
       'oneToMany',
       'api::science.science'
     >;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1643,7 +1649,7 @@ export interface ApiNewNew extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1711,7 +1717,7 @@ export interface ApiScienceScience extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1780,7 +1786,7 @@ export interface ApiSpSp extends Schema.SingleType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1844,7 +1850,7 @@ export interface ApiSpecialtySpecialty extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1906,7 +1912,7 @@ export interface ApiStudentStudent extends Schema.SingleType {
           localized: true;
         };
       }>;
-    site_url: Attribute.String &
+    seo_url: Attribute.String &
       Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {

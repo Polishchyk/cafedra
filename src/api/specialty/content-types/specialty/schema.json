@@ -56,7 +56,7 @@
       "type": "richtext",
       "required": true
     },
-    "site_url": {
+    "seo_url": {
       "pluginOptions": {
         "i18n": {
           "localized": true

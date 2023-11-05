@@ -162,8 +162,17 @@
         }
       },
       "type": "string",
-      "unique": true,
+      "unique": false,
       "required": false
+    },
+    "seo_url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": true
     }
   }
 }

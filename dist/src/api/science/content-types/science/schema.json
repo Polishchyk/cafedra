@@ -56,7 +56,7 @@
                 }
             }
         },
-        "site_url": {
+        "seo_url": {
             "pluginOptions": {
                 "i18n": {
                     "localized": true
