@@ -614,6 +614,9 @@ export interface PluginMenusMenuItem extends Schema.CollectionType {
         'student'
       ]
     >;
+    target_ua: Attribute.Enumeration<['_blank', '_parent', '_self', '_top']>;
+    title_ua: Attribute.Text;
+    link_ua: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
