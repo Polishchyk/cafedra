@@ -1674,6 +1674,11 @@ export interface ApiNewNew extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    news_categories: Attribute.Relation<
+      'api::new.new',
+      'oneToMany',
+      'api::news-category.news-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1685,6 +1690,66 @@ export interface ApiNewNew extends Schema.CollectionType {
       'api::new.new',
       'oneToMany',
       'api::new.new'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiNewsCategoryNewsCategory extends Schema.CollectionType {
+  collectionName: 'news_categories';
+  info: {
+    singularName: 'news-category';
+    pluralName: 'news-categories';
+    displayName: 'News Category';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    parent: Attribute.Relation<
+      'api::news-category.news-category',
+      'oneToMany',
+      'api::news-category.news-category'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::news-category.news-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::news-category.news-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::news-category.news-category',
+      'oneToMany',
+      'api::news-category.news-category'
     >;
     locale: Attribute.String;
   };
@@ -2055,6 +2120,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::message.message': ApiMessageMessage;
       'api::new.new': ApiNewNew;
+      'api::news-category.news-category': ApiNewsCategoryNewsCategory;
       'api::page.page': ApiPagePage;
       'api::science.science': ApiScienceScience;
       'api::sp.sp': ApiSpSp;

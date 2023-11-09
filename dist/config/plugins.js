@@ -67,6 +67,10 @@ exports.default = ({ env }) => ({
                     field: 'seo_url',
                     references: 'Title',
                 },
+                'news-category': {
+                    field: 'seo_url',
+                    references: 'Title',
+                }
             },
         },
     },

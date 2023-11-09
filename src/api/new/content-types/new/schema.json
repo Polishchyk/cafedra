@@ -63,6 +63,11 @@
       },
       "type": "string",
       "unique": true
+    },
+    "news_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::news-category.news-category"
     }
   }
 }
