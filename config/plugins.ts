@@ -62,6 +62,10 @@ export default ({env}) => (
           field: 'seo_url',
           references: 'Title',
         },
+        page: {
+          field: 'seo_url',
+          references: 'Title',
+        },
       },
     },
   },

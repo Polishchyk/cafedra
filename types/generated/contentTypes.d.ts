@@ -1690,6 +1690,71 @@ export interface ApiNewNew extends Schema.CollectionType {
   };
 }
 
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Pages';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Image: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Content: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbar';
+        }
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo_url: Attribute.String &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::page.page',
+      'oneToMany',
+      'api::page.page'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiScienceScience extends Schema.CollectionType {
   collectionName: 'sciences';
   info: {
@@ -1990,6 +2055,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::message.message': ApiMessageMessage;
       'api::new.new': ApiNewNew;
+      'api::page.page': ApiPagePage;
       'api::science.science': ApiScienceScience;
       'api::sp.sp': ApiSpSp;
       'api::specialty.specialty': ApiSpecialtySpecialty;
