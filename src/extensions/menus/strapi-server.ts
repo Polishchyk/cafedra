@@ -36,7 +36,7 @@ module.exports = plugin => {
     title_ua:{
       type: 'text'
     },
-    link_ua:{
+    url_ua:{
       type: 'text'
     },
   };
