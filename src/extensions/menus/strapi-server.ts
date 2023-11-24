@@ -24,7 +24,7 @@ module.exports = plugin => {
         'student',
       ],
     },
-    target_ua: {
+    target_en: {
       type: 'enumeration',
       enum: [
         '_blank',
@@ -33,10 +33,10 @@ module.exports = plugin => {
         '_top',
       ],
     },
-    title_ua:{
+    title_en:{
       type: 'text'
     },
-    url_ua:{
+    url_en:{
       type: 'text'
     },
   };

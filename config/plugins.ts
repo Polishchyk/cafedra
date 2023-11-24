@@ -103,25 +103,25 @@ export default ({env}) => (
               },
             },
           ],
-          link_ua: [
+          link_en: [
             {
               input: {
                 label: 'Title',
-                name: 'title_ua',
+                name: 'title_en',
                 type: 'text'
               },
             },
             {
               input: {
                 label: 'URL',
-                name: 'url_ua',
+                name: 'url_en',
                 type: 'text'
               },
             },
             {
               input: {
                 label: 'Target',
-                name: 'target_ua',
+                name: 'target_en',
                 type: 'select',
                 options: [
                   {
